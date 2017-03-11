@@ -4,6 +4,7 @@ import java.sql.Connection;
 
 import javax.sql.DataSource;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,6 +16,7 @@ public class TestConnection {
 
 
 	@Test
+	@Ignore
 	public void test01() throws Exception{
 		DataSource dataSource = ioc.getBean(DataSource.class);
 		Connection connection = dataSource.getConnection();

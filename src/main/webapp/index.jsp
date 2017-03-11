@@ -9,7 +9,7 @@
 <body>
 	hello!
 	<div>
-	<a href="/rs/coming" ,src="#">进入</a>
+	<a href="/Relation/rs/coming" ,src="#">进入</a>
 	</div>
 </body>
 </html>

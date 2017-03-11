@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/Relation/rs/")
+@RequestMapping(value = "/rs/")
 public class PageController {
 
 	@RequestMapping(value = "coming")
