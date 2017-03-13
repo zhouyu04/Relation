@@ -27,6 +27,4 @@ public interface AccountMapper {
     int updateByPrimaryKeySelective(Account record);
 
     int updateByPrimaryKey(Account record);
-
-	Long getTotalElement();
 }

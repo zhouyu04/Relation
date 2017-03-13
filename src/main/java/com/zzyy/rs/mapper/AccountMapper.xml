@@ -320,8 +320,4 @@
       description = #{description,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  
-  <select id="getTotalElement" resultType="Long">
-  	select count(id) from rs_account
-  </select>
 </mapper>

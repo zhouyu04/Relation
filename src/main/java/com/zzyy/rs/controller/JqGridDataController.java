@@ -40,17 +40,12 @@ public class JqGridDataController {
 			@RequestParam(value = "idCardNo", required = false) String idCardNo) {
 		GridData result = new GridData();
 		Long records = accountService.getTotalElement();// 数据库查除总条数
-		if(records == null){
-			records = 2L;
-		}
+		
 		long totalPage = records % rows == 0 ? records / rows : records / rows + 1;// 总页数
-		Account account = new Account();
-		account.setReNum("1");
-		account.setRsName("罗二");
-		account.setBalance(new BigDecimal(100.00));
+		
 
-		List<Account> accountList = new ArrayList<>();// 实际数据
-		accountList.add(account);
+		List<Account> accountList = accountService.getAccountLists();// 实际数据
+		
 		result.setPage(page);
 		result.setTotal((int) totalPage);
 		result.setRecords(records);

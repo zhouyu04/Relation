@@ -1,9 +1,12 @@
 package com.zzyy.rs.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zzyy.rs.dao.AccountDao;
+import com.zzyy.rs.entities.Account;
 import com.zzyy.rs.service.AccountService;
 import com.zzyy.rs.service.baseService;
 
@@ -16,6 +19,13 @@ public class AccountServiceImpl extends baseService implements AccountService{
 	@Override
 	public Long getTotalElement() {
 		Long result = accountDao.getTotalElement();
+		return result;
+	}
+
+
+	@Override
+	public List<Account> getAccountLists() {
+		List<Account> result = accountDao.getAccountLists();
 		return result;
 	}
 
