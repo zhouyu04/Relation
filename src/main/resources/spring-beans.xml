@@ -36,7 +36,8 @@
 
 	<!-- 扫描所有的 Mapper -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.atguigu.crm.mapper"></property>
+		<property name="basePackage" value="com.zzyy.rs.mapper"></property>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"></property>  
 	</bean>
 
 
