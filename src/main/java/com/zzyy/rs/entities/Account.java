@@ -26,6 +26,8 @@ public class Account {
 
     private Integer version;
 
+    private String description;
+
     public Integer getId() {
         return id;
     }
@@ -112,5 +114,13 @@ public class Account {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
     }
 }

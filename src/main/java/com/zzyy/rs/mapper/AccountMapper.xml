@@ -13,6 +13,7 @@
     <result column="rs_name" property="rsName" jdbcType="VARCHAR" />
     <result column="re_num" property="reNum" jdbcType="VARCHAR" />
     <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,7 +75,7 @@
   </sql>
   <sql id="Base_Column_List" >
     id, balance, accumulat_increase, accumulat_decrease, create_date, modify_date, operater, 
-    last_balance, rs_name, re_num, version
+    last_balance, rs_name, re_num, version, description
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zzyy.rs.entities.AccountExample" >
     select
@@ -110,11 +111,13 @@
     insert into rs_account (id, balance, accumulat_increase, 
       accumulat_decrease, create_date, modify_date, 
       operater, last_balance, rs_name, 
-      re_num, version)
+      re_num, version, description
+      )
     values (#{id,jdbcType=INTEGER}, #{balance,jdbcType=DECIMAL}, #{accumulatIncrease,jdbcType=DECIMAL}, 
       #{accumulatDecrease,jdbcType=DECIMAL}, #{createDate,jdbcType=TIMESTAMP}, #{modifyDate,jdbcType=TIMESTAMP}, 
       #{operater,jdbcType=VARCHAR}, #{lastBalance,jdbcType=DECIMAL}, #{rsName,jdbcType=VARCHAR}, 
-      #{reNum,jdbcType=VARCHAR}, #{version,jdbcType=INTEGER})
+      #{reNum,jdbcType=VARCHAR}, #{version,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.zzyy.rs.entities.Account" >
     insert into rs_account
@@ -152,6 +155,9 @@
       <if test="version != null" >
         version,
       </if>
+      <if test="description != null" >
+        description,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -186,6 +192,9 @@
       </if>
       <if test="version != null" >
         #{version,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -231,6 +240,9 @@
       <if test="record.version != null" >
         version = #{record.version,jdbcType=INTEGER},
       </if>
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -248,7 +260,8 @@
       last_balance = #{record.lastBalance,jdbcType=DECIMAL},
       rs_name = #{record.rsName,jdbcType=VARCHAR},
       re_num = #{record.reNum,jdbcType=VARCHAR},
-      version = #{record.version,jdbcType=INTEGER}
+      version = #{record.version,jdbcType=INTEGER},
+      description = #{record.description,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -286,6 +299,9 @@
       <if test="version != null" >
         version = #{version,jdbcType=INTEGER},
       </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -300,7 +316,12 @@
       last_balance = #{lastBalance,jdbcType=DECIMAL},
       rs_name = #{rsName,jdbcType=VARCHAR},
       re_num = #{reNum,jdbcType=VARCHAR},
-      version = #{version,jdbcType=INTEGER}
+      version = #{version,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="getTotalElement" resultType="Long">
+  	select count(id) from rs_account
+  </select>
 </mapper>

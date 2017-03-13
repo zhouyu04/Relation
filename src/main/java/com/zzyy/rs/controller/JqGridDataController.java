@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zzyy.rs.entities.Account;
 import com.zzyy.rs.entities.GridData;
+import com.zzyy.rs.service.AccountService;
 
 
 @Controller
@@ -21,7 +22,8 @@ import com.zzyy.rs.entities.GridData;
 public class JqGridDataController {
 	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(JqGridDataController.class);
 
-	
+	@Autowired
+	AccountService accountService;
 	
 	@RequestMapping(value = "account", method = RequestMethod.GET)
 	@ResponseBody
@@ -38,7 +40,7 @@ public class JqGridDataController {
 			@RequestParam(value = "phone", required = false) String phone,
 			@RequestParam(value = "idCardNo", required = false) String idCardNo) {
 		GridData result = new GridData();
-		Long records = 1L;//数据库查除总条数
+		Long records = accountService.getTotalElement();//数据库查除总条数
 		
 		long totalPage = records % rows == 0 ? records / rows : records / rows + 1;//总页数
 		Account account = new Account();
