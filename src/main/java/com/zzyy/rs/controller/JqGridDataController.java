@@ -16,7 +16,6 @@ import com.zzyy.rs.entities.Account;
 import com.zzyy.rs.entities.GridData;
 import com.zzyy.rs.service.AccountService;
 
-
 @Controller
 @RequestMapping(value = "/rs/")
 public class JqGridDataController {
@@ -24,7 +23,7 @@ public class JqGridDataController {
 
 	@Autowired
 	AccountService accountService;
-	
+
 	@RequestMapping(value = "account", method = RequestMethod.GET)
 	@ResponseBody
 	public GridData totalTransactionFlow(
@@ -40,16 +39,17 @@ public class JqGridDataController {
 			@RequestParam(value = "phone", required = false) String phone,
 			@RequestParam(value = "idCardNo", required = false) String idCardNo) {
 		GridData result = new GridData();
-		Long records = accountService.getTotalElement();//数据库查除总条数
-		
-		long totalPage = records % rows == 0 ? records / rows : records / rows + 1;//总页数
+		Long records = accountService.getTotalElement();// 数据库查除总条数
+		if(records == null){
+			records = 2L;
+		}
+		long totalPage = records % rows == 0 ? records / rows : records / rows + 1;// 总页数
 		Account account = new Account();
 		account.setReNum("1");
 		account.setRsName("罗二");
 		account.setBalance(new BigDecimal(100.00));
-		
-		
-		List<Account> accountList = new ArrayList<>();//实际数据
+
+		List<Account> accountList = new ArrayList<>();// 实际数据
 		accountList.add(account);
 		result.setPage(page);
 		result.setTotal((int) totalPage);
