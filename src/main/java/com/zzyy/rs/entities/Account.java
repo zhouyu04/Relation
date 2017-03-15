@@ -28,6 +28,12 @@ public class Account {
 
     private String description;
 
+    private String spell;
+
+    private String firstSpell;
+
+    private BigDecimal operateamount;
+
     public Integer getId() {
         return id;
     }
@@ -122,5 +128,29 @@ public class Account {
 
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
+    }
+
+    public String getSpell() {
+        return spell;
+    }
+
+    public void setSpell(String spell) {
+        this.spell = spell == null ? null : spell.trim();
+    }
+
+    public String getFirstSpell() {
+        return firstSpell;
+    }
+
+    public void setFirstSpell(String firstSpell) {
+        this.firstSpell = firstSpell == null ? null : firstSpell.trim();
+    }
+
+    public BigDecimal getOperateamount() {
+        return operateamount;
+    }
+
+    public void setOperateamount(BigDecimal operateamount) {
+        this.operateamount = operateamount;
     }
 }

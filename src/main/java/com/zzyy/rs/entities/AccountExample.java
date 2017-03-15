@@ -865,6 +865,206 @@ public class AccountExample {
             addCriterion("description not between", value1, value2, "description");
             return (Criteria) this;
         }
+
+        public Criteria andSpellIsNull() {
+            addCriterion("spell is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellIsNotNull() {
+            addCriterion("spell is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellEqualTo(String value) {
+            addCriterion("spell =", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellNotEqualTo(String value) {
+            addCriterion("spell <>", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellGreaterThan(String value) {
+            addCriterion("spell >", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellGreaterThanOrEqualTo(String value) {
+            addCriterion("spell >=", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellLessThan(String value) {
+            addCriterion("spell <", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellLessThanOrEqualTo(String value) {
+            addCriterion("spell <=", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellLike(String value) {
+            addCriterion("spell like", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellNotLike(String value) {
+            addCriterion("spell not like", value, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellIn(List<String> values) {
+            addCriterion("spell in", values, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellNotIn(List<String> values) {
+            addCriterion("spell not in", values, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellBetween(String value1, String value2) {
+            addCriterion("spell between", value1, value2, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpellNotBetween(String value1, String value2) {
+            addCriterion("spell not between", value1, value2, "spell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellIsNull() {
+            addCriterion("first_spell is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellIsNotNull() {
+            addCriterion("first_spell is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellEqualTo(String value) {
+            addCriterion("first_spell =", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellNotEqualTo(String value) {
+            addCriterion("first_spell <>", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellGreaterThan(String value) {
+            addCriterion("first_spell >", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellGreaterThanOrEqualTo(String value) {
+            addCriterion("first_spell >=", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellLessThan(String value) {
+            addCriterion("first_spell <", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellLessThanOrEqualTo(String value) {
+            addCriterion("first_spell <=", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellLike(String value) {
+            addCriterion("first_spell like", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellNotLike(String value) {
+            addCriterion("first_spell not like", value, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellIn(List<String> values) {
+            addCriterion("first_spell in", values, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellNotIn(List<String> values) {
+            addCriterion("first_spell not in", values, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellBetween(String value1, String value2) {
+            addCriterion("first_spell between", value1, value2, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andFirstSpellNotBetween(String value1, String value2) {
+            addCriterion("first_spell not between", value1, value2, "firstSpell");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountIsNull() {
+            addCriterion("operateAmount is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountIsNotNull() {
+            addCriterion("operateAmount is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountEqualTo(BigDecimal value) {
+            addCriterion("operateAmount =", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountNotEqualTo(BigDecimal value) {
+            addCriterion("operateAmount <>", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountGreaterThan(BigDecimal value) {
+            addCriterion("operateAmount >", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("operateAmount >=", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountLessThan(BigDecimal value) {
+            addCriterion("operateAmount <", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("operateAmount <=", value, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountIn(List<BigDecimal> values) {
+            addCriterion("operateAmount in", values, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountNotIn(List<BigDecimal> values) {
+            addCriterion("operateAmount not in", values, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("operateAmount between", value1, value2, "operateamount");
+            return (Criteria) this;
+        }
+
+        public Criteria andOperateamountNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("operateAmount not between", value1, value2, "operateamount");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

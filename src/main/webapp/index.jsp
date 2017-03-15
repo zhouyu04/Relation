@@ -11,5 +11,8 @@
 	<div>
 	<a href="/Relation/rs/coming" ,src="#">进入</a>
 	</div>
+	<div>
+	<a href="/Relation/add/addEvent" ,src="#">添加</a>
+	</div>
 </body>
 </html>
