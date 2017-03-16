@@ -26,13 +26,13 @@ public class PageController {
 		
 		return "inputEvent";
 	}
-	
+
 	@RequestMapping(value = "add/input", method = RequestMethod.GET)
 	public String add(Model model){
 		AccountModel accountModel = new AccountModel();
 		accountModel.add(new Account());
 		accountModel.add(new Account());
-		
+
 		model.addAttribute("AccountModel", accountModel);
 		return "input";
 	}

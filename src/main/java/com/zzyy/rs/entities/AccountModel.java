@@ -18,7 +18,7 @@ public class AccountModel {
 	
 	
 	public AccountModel() {
-		this.accounts = new ArrayList<>();
+		this.accounts = new ArrayList<Account>();
 	}
 
 	public AccountModel(List<Account> accounts) {

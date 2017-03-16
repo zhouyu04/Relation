@@ -14,14 +14,14 @@ public class AccountDaoImpl implements AccountDao {
 	@Autowired
 	GridMapper gridmapper;
 	
-	@Override
+
 	public Long getTotalElement() {
 		
 		
 		return gridmapper.getTotalElement();
 	}
 
-	@Override
+
 	public List<Account> getAccountLists() {
 		List<Account> result = gridmapper.getAccountLists();
 		return result;

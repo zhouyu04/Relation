@@ -16,14 +16,14 @@ public class AccountServiceImpl extends baseService implements AccountService{
 	@Autowired
 	AccountDao accountDao;
 	
-	@Override
+
 	public Long getTotalElement() {
 		Long result = accountDao.getTotalElement();
 		return result;
 	}
 
 
-	@Override
+
 	public List<Account> getAccountLists() {
 		List<Account> result = accountDao.getAccountLists();
 		return result;
